@@ -7,8 +7,8 @@
 **Local Scheme**
 如截图所示---**Bilateral Normal Filtering for Mesh Denoising**
 ![1](1.png)
-现手动计算,便于C++实现    
-$ dfdfdfdfd$  
+现手动计算,便于C++实现:     
+$$\mathbf{n}_i^\prime=K_i \sum_{j\ni\N(i)} \zeta_{ij} W_c(  \begin{Vmatrix} \mathbf{c}_i-\mathbf{c}_j  \end{Vmatrix}) W_s(\begin{Vmatrix} \mathbf{n}_i-\mathbf{n}_j  \end{Vmatrix}) \mathbf{n}_j$$
 
 其中
 $
@@ -77,15 +77,25 @@ $
 $
 相关变量
 $K_i$:向量归一化系数
+
 $N(i)$:面$f_i$的邻近面集合,可选择基于顶点/面
+
 $c_i$:面$f_i$的中心坐标
+
 $c_j$:面$f_j$的中心坐标
+
 $n_i$:面$f_i$的法向量
+
 $n_j$:面$f_j$的法向量
+
 $W_c$:基于中心坐标的高斯函数
+
 $W_s$:基于法向量的高斯函数
+
 $\sigma_c$:中心坐标的高斯函数里的标准差
+
 $\sigma_s$:法向量的高斯函数里的标准差
+
 通过迭代,paper中给出次数为5,即可求出法向量
 
 **Global Scheme**
@@ -108,14 +118,7 @@ $$
 $
 
 其中
-$
-E_s=\sum_i A_i 
-$$ 
-    \begin{Vmatrix}
-    \mathbf{n}_i^\prime - K_i \sum_{j\ni\N(i)} w_{ij} \mathbf{n}_j^\prime 
-    \end{Vmatrix}^2  
-$$      
-$
+$$ E_s=\sum_i A_i \begin{Vmatrix} \mathbf{n}_i^\prime - K_i \sum_{j\ni\N(i)} w_{ij} \mathbf{n}_j^\prime \end{Vmatrix}^2 $$
 
 $
 E_d= \lambda \sum_i A_i
