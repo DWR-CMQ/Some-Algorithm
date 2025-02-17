@@ -1,3 +1,4 @@
+
 # Some-Algorithm
 论文
 * Youyi Zheng, Hongbo Fu, Oscar Kin-Chung Au, and Chiew-Lan Tai. 2011. <b>Bilateral Normal Filtering for Mesh Denoising</b>. IEEE Transactions on Visualization and Computer Graphics 17, 10 (October 2011), 1521-1530.
@@ -6,23 +7,9 @@
 **Local Scheme**
 如截图所示---**Bilateral Normal Filtering for Mesh Denoising**
 ![1](1.png)
-现手动计算,便于C++实现
-$
-\mathbf{n}_i^\prime=K_i \sum_{j\ni\N(i)} \zeta_{ij} 
-W_c(
-$$ 
-    \begin{Vmatrix}
-    \mathbf{c}_i-\mathbf{c}_j 
-    \end{Vmatrix}  
-$$)
-W_s(
-$$ 
-    \begin{Vmatrix}
-    \mathbf{n}_i-\mathbf{n}_j 
-    \end{Vmatrix}  
-$$)
-\mathbf{n}_j 
-$
+现手动计算,便于C++实现    
+$ dfdfdfdfd$  
+
 其中
 $
 K_i=\frac{1}{\sum_{j\ni\N(i)} \zeta_{ij} 
@@ -163,30 +150,26 @@ $$
 $
 
 -------------------------------------------------------------------
-基于带有惩罚项的最小二乘法的数学原理,去除$\sum$, 可以将Result组装成矩阵
-$
-\Rightarrow Result = argmin_{N^\prime}
-$$
-(1 - \lambda) D (N^\prime - W N^\prime)^2 + \lambda D (N^\prime - N)^2
-$$
-$
-对$N^\prime$求偏导,并令其为0,则有
-$
-\Rightarrow 2 N^\prime(1 - \lambda) D (1 - 2W + W^2) + \lambda D (2 N^\prime - 2 N)=0
-$
-$
-\Rightarrow [(1 - \lambda)(1 - W)^2 + \lambda] N^\prime = \lambda N
-$
+基于带有惩罚项的最小二乘法的数学原理,去除 $\sum$, 可以将Result组装成矩阵
+
+$$\Rightarrow Result = argmin_{N^\prime} (1 - \lambda) D (N^\prime - W N^\prime)^2 + \lambda D (N^\prime - N)^2$$
+
+对 $N^\prime$求偏导,并令其为0,则有
+
+$$\Rightarrow 2 N^\prime(1 - \lambda) D (1 - 2W + W^2) + \lambda D (2 N^\prime - 2 N)=0$$
+
+$$\Rightarrow [(1 - \lambda)(1 - W)^2 + \lambda] N^\prime = \lambda N$$    
+
 其中
-$N^\prime$:要求的未知量,也就是法向量
-$N$:已知面的法向量
-$W$:由基于中心坐标和法向量的高斯函数相乘得到,并用Eigen的setFromTriplets组装成矩阵
-利用$AX=B$即可求出X,从原理上可以计算出结果
+$$N^\prime$$:要求的未知量,也就是法向量
+
+$$N$$:已知面的法向量
+
+$$W$$:由基于中心坐标和法向量的高斯函数相乘得到,并用Eigen的setFromTriplets组装成矩阵
+
+利用AX=B即可求出X,从原理上可以计算出结果
+
 相关变量已经由Local Scheme给出,这里不再给出
-
-
-
-
 
 
 
