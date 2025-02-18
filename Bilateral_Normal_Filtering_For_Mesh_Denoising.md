@@ -1,8 +1,9 @@
 # Paper
 * Youyi Zheng, Hongbo Fu, Oscar Kin-Chung Au, and Chiew-Lan Tai. 2011. <b>Bilateral Normal Filtering for Mesh Denoising</b>. IEEE Transactions on Visualization and Computer Graphics 17, 10 (October 2011), 1521-1530.      
 
-**Local Scheme**
-As a screenshot of the paper---**Bilateral Normal Filtering for Mesh Denoising**
+## The Derivation Process
+***Local Scheme***    
+As a screenshot of the paper---**Bilateral Normal Filtering for Mesh Denoising**    
 ![](./images/1.png)      
 Now perform manual calculations to facilitate C++ implementation:      
 ![](https://latex.codecogs.com/svg.image?\mathbf{n}_i^\prime=K_i\sum_{j\in&space;N\left(i\right)}\zeta_{ij}W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)W_s\left(\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}\right)\mathbf{n}_j&space;)
@@ -47,7 +48,7 @@ $\sigma_s$: the standard deviation in the Gaussian function of normal
 
 Through iteration, the paper suggests that performing the process 5 times is sufficient to determine the normal vector
 
-**Global Scheme**      
+***Global Scheme***      
 As a screenshot of the paper    
 ![](./images/2.png)  
 To derive the aforementioned formula and compute the final result  
