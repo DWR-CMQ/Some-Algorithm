@@ -1,6 +1,6 @@
 
 # Some-Mesh-Algorithms
-##Denoise
+## Denoise
 - **Bilateral_Normal_Filtering_For_Mesh_Denoising.md**
 
 
