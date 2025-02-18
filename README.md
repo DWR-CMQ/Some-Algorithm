@@ -4,13 +4,13 @@
 
 **Local Scheme**
 As a screenshot of the paper---**Bilateral Normal Filtering for Mesh Denoising**
-![1](1.png)      
+![](./images/1.png)      
 Now perform manual calculations to facilitate C++ implementation:      
-![2](https://latex.codecogs.com/svg.image?\mathbf{n}_i^\prime=K_i\sum_{j\in&space;N\left(i\right)}\zeta_{ij}W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)W_s\left(\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}\right)\mathbf{n}_j&space;)
+![](https://latex.codecogs.com/svg.image?\mathbf{n}_i^\prime=K_i\sum_{j\in&space;N\left(i\right)}\zeta_{ij}W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)W_s\left(\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}\right)\mathbf{n}_j&space;)
 
 
 and     
-![3](https://latex.codecogs.com/svg.image?K_i=\frac{1}{\sum_{j\in&space;N(i)}\zeta_{ij}W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)W_s\left(\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}\right)})
+![](https://latex.codecogs.com/svg.image?K_i=\frac{1}{\sum_{j\in&space;N(i)}\zeta_{ij}W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)W_s\left(\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}\right)})
 
 ![](https://latex.codecogs.com/svg.image?W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)=exp\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)^2/2\sigma_c^2))   
 ![](https://latex.codecogs.com/svg.image?\Rightarrow&space;W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)=e^{-\frac{\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}^2}{2\sigma_c^2}})   
@@ -19,11 +19,11 @@ and
 ![](https://latex.codecogs.com/svg.image?\Rightarrow&space;W_s\left(\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}\right)=e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}})  
 
 $\mathbf{n}_i^\prime$ can be simplicified to                            
-![6](https://latex.codecogs.com/svg.image?\mathbf{n}_i^\prime=\frac{\sum_{j\in&space;N\left(i\right)}\zeta_{ij}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}\mathbf{n}_j}{\sum_{j\in&space;N\left(i\right)}\zeta_{ij}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}})
+![](https://latex.codecogs.com/svg.image?\mathbf{n}_i^\prime=\frac{\sum_{j\in&space;N\left(i\right)}\zeta_{ij}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}\mathbf{n}_j}{\sum_{j\in&space;N\left(i\right)}\zeta_{ij}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}})
 
 
 The process is similar to:    
-![7](https://latex.codecogs.com/svg.image?\mathbf{n}_i^\prime=\frac{K_1\mathbf{n}_1&plus;K_2\mathbf{n}_2&plus;K_3\mathbf{n}_3&plus;\cdots}{K_1&plus;K_2&plus;K_3&plus;\cdots})
+![](https://latex.codecogs.com/svg.image?\mathbf{n}_i^\prime=\frac{K_1\mathbf{n}_1&plus;K_2\mathbf{n}_2&plus;K_3\mathbf{n}_3&plus;\cdots}{K_1&plus;K_2&plus;K_3&plus;\cdots})
 
 The related variables:        
 $K_i$: The vector normalization coefficient
@@ -50,9 +50,9 @@ Through iteration, the paper suggests that performing the process 5 times is suf
 
 **Global Scheme**      
 As a screenshot of the paper    
-![8](2.png)  
+![](./images/2.png)  
 To derive the aforementioned formula and compute the final result  
-![9](https://latex.codecogs.com/svg.image?\underset{\mathbf{n}_i^\prime}{argmin}\left(1-\lambda\right)E_s&plus;\lambda&space;E_d=\underset{\mathbf{n}_i^\prime}{argmin}\left(1-\lambda\right)\begin{Vmatrix}\mathbf{n}_i^\prime-K_i\sum_{j\in&space;N\left(i\right)}w_{ij}\mathbf{n}_j^\prime\end{Vmatrix}^2&plus;\lambda\begin{Vmatrix}\mathbf{n}_i^\prime-\mathbf{n}_i\end{Vmatrix}^2&space;)   
+![](https://latex.codecogs.com/svg.image?\underset{\mathbf{n}_i^\prime}{argmin}\left(1-\lambda\right)E_s&plus;\lambda&space;E_d=\underset{\mathbf{n}_i^\prime}{argmin}\left(1-\lambda\right)\begin{Vmatrix}\mathbf{n}_i^\prime-K_i\sum_{j\in&space;N\left(i\right)}w_{ij}\mathbf{n}_j^\prime\end{Vmatrix}^2&plus;\lambda\begin{Vmatrix}\mathbf{n}_i^\prime-\mathbf{n}_i\end{Vmatrix}^2&space;)   
 and    
 ![](https://latex.codecogs.com/svg.image?E_s=\sum_i&space;A_i\begin{Vmatrix}\mathbf{n}_i^\prime-K_i\sum_{j\in&space;N\left(i\right)}w_{ij}\mathbf{n}_j^\prime\end{Vmatrix}^2)        
 ![](https://latex.codecogs.com/svg.image?E_d=\lambda\sum_i&space;A_i\begin{Vmatrix}\mathbf{n}_i^\prime-\mathbf{n}_i\end{Vmatrix}^2&space;)    
