@@ -1,7 +1,6 @@
 
 # Some-Algorithm
-* Youyi Zheng, Hongbo Fu, Oscar Kin-Chung Au, and Chiew-Lan Tai. 2011. <b>Bilateral Normal Filtering for Mesh Denoising</b>. IEEE Transactions on Visualization and Computer Graphics 17, 10 (October 2011), 1521-1530.
-
+* Youyi Zheng, Hongbo Fu, Oscar Kin-Chung Au, and Chiew-Lan Tai. 2011. <b>Bilateral Normal Filtering for Mesh Denoising</b>. IEEE Transactions on Visualization and Computer Graphics 17, 10 (October 2011), 1521-1530.      
 
 **Local Scheme**
 As a screenshot of the paper---**Bilateral Normal Filtering for Mesh Denoising**
@@ -13,12 +12,14 @@ Now perform manual calculations to facilitate C++ implementation:
 and     
 ![3](https://latex.codecogs.com/svg.image?K_i=\frac{1}{\sum_{j\in&space;N(i)}\zeta_{ij}W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)W_s\left(\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}\right)})
 
-![4](https://latex.codecogs.com/svg.image?&space;W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)=exp\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)^2/2\sigma_c^2)=e^{-\frac{\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}}{2\sigma_c^2}})
+![](https://latex.codecogs.com/svg.image?W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)=exp\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)^2/2\sigma_c^2))   
+![](https://latex.codecogs.com/svg.image?\Rightarrow&space;W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)=e^{-\frac{\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}^2}{2\sigma_c^2}})   
 
-![5](https://latex.codecogs.com/svg.image?&space;W_c\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)=exp\left(\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}\right)^2/2\sigma_c^2)=e^{-\frac{\begin{Vmatrix}\mathbf{c}_i-\mathbf{c}_j\end{Vmatrix}}{2\sigma_c^2}})
+![](https://latex.codecogs.com/svg.image?&space;W_s\left(\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}\right)=exp\left(\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}\right)^2/2\sigma_s^2))  
+![](https://latex.codecogs.com/svg.image?\Rightarrow&space;W_s\left(\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}\right)=e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}})  
 
 $\mathbf{n}_i^\prime$ can be simplicified to                            
-![6](https://latex.codecogs.com/svg.image?\mathbf{n}_i^\prime=\frac{\sum_{j\in&space;N\left(i\right)}\zeta_{ij}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}}{2\sigma_s^2}}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}}{2\sigma_s^2}}\mathbf{n}_j}{\sum_{j\in&space;N\left(i\right)}\zeta_{ij}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}}{2\sigma_s^2}}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}}{2\sigma_s^2}}})
+![6](https://latex.codecogs.com/svg.image?\mathbf{n}_i^\prime=\frac{\sum_{j\in&space;N\left(i\right)}\zeta_{ij}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}\mathbf{n}_j}{\sum_{j\in&space;N\left(i\right)}\zeta_{ij}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}e^{-\frac{\begin{Vmatrix}\mathbf{n}_i-\mathbf{n}_j\end{Vmatrix}^2}{2\sigma_s^2}}})
 
 
 The process is similar to:    
