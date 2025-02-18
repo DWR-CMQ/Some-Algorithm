@@ -1,5 +1,4 @@
-
-# Some-Algorithm
+# Paper
 * Youyi Zheng, Hongbo Fu, Oscar Kin-Chung Au, and Chiew-Lan Tai. 2011. <b>Bilateral Normal Filtering for Mesh Denoising</b>. IEEE Transactions on Visualization and Computer Graphics 17, 10 (October 2011), 1521-1530.      
 
 **Local Scheme**
