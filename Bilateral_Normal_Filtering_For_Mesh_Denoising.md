@@ -82,16 +82,22 @@ By utilizing AX=B, X can be solved for. In principle, the result can be computed
 
 
 ## Compare the Local Scheme and Global Scheme
-**Origin Bunny**
-<div style="padding: 5px; margin-left:auto;margin-right:auto;"">
+**origin bunny**
+<div style="display: grid; place-items: center;">
     <img src="images/original_bunny.png" width="400" />
 </div>
 
-**After Local Scheme**
-<div style="padding: 5px">
+**the bunny after local scheme**
+<div style="display: grid; place-items: center;">
     <img src="images/result_local_scheme.png" width="400" />
 </div>
 
+**the bunny after global scheme**
+<div style="display: grid; place-items: center;">
+    <img src="images/result_global_scheme.png" width="400" />
+</div>
+
+<font color=blue>The local scheme is approximately 6 times faster than the global scheme. The primary time consumption in the global scheme lies in the matrix inversion process. In practical engineering applications, opting for the local scheme is the most optimal choice.</font>
 
 
 
