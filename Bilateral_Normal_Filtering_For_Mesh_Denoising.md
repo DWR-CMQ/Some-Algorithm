@@ -81,10 +81,16 @@ $W$: it is obtained by multiplying the Gaussian function based on central coordi
 By utilizing AX=B, X can be solved for. In principle, the result can be computed, and the relevant variables have already been provided by the Local Scheme, so they will not be reiterated here.   
 
 
+## Compare the Local Scheme and Global Scheme
+**Origin Bunny**
+<div style="padding: 5px; margin-left:auto;margin-right:auto;"">
+    <img src="images/original_bunny.png" width="400" />
+</div>
 
-
-
-
+**After Local Scheme**
+<div style="padding: 5px">
+    <img src="images/result_local_scheme.png" width="400" />
+</div>
 
 
 
