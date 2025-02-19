@@ -97,6 +97,21 @@ By utilizing AX=B, X can be solved for. In principle, the result can be computed
     <img src="images/result_global_scheme.png" width="400" />
 </div>
 
+<p align="center">
+  <figure>
+    <img src="images/result_global_scheme.png" alt="Image 1" width="30%">
+    <figcaption>Title 1</figcaption>
+  </figure>
+  <figure>
+    <img src="images/result_global_scheme.png" alt="Image 2" width="30%">
+    <figcaption>Title 2</figcaption>
+  </figure>
+  <figure>
+    <img src="images/result_global_scheme.png" alt="Image 3" width="30%">
+    <figcaption>Title 3</figcaption>
+  </figure>
+</p>
+
 <font color=blue>The local scheme is approximately 6 times faster than the global scheme. The primary time consumption in the global scheme lies in the matrix inversion process. In practical engineering applications, opting for the local scheme is the most optimal choice.</font>
 
 
