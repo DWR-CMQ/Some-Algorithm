@@ -82,35 +82,18 @@ By utilizing AX=B, X can be solved for. In principle, the result can be computed
 
 
 ## Compare the Local Scheme and Global Scheme
-**origin bunny**
-<div style="display: grid; place-items: center;">
-    <img src="images/original_bunny.png" width="400" />
-</div>
-
-**the bunny after local scheme**
-<div style="display: grid; place-items: center;">
-    <img src="images/result_local_scheme.png" width="400" />
-</div>
-
-**the bunny after global scheme**
-<div style="display: grid; place-items: center;">
-    <img src="images/result_global_scheme.png" width="400" />
-</div>
-
-<p align="center">
-  <figure>
-    <img src="images/result_global_scheme.png" alt="Image 1" width="30%">
-    <figcaption>Title 1</figcaption>
-  </figure>
-  <figure>
-    <img src="images/result_global_scheme.png" alt="Image 2" width="30%">
-    <figcaption>Title 2</figcaption>
-  </figure>
-  <figure>
-    <img src="images/result_global_scheme.png" alt="Image 3" width="30%">
-    <figcaption>Title 3</figcaption>
-  </figure>
-</p>
+<table>
+  <tr>
+    <td><img src="images/original_bunny.png" alt="Image 1" width="100%"></td>
+    <td><img src="images/result_local_scheme.png" alt="Image 2" width="100%"></td>
+    <td><img src="images/result_global_scheme.png" alt="Image 3" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center">origin bunny</td>
+    <td align="center">after local scheme</td>
+    <td align="center">after global scheme</td>
+  </tr>
+</table>
 
 <font color=blue>The local scheme is approximately 6 times faster than the global scheme. The primary time consumption in the global scheme lies in the matrix inversion process. In practical engineering applications, opting for the local scheme is the most optimal choice.</font>
 
