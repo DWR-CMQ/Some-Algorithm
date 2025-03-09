@@ -33,6 +33,17 @@
 ![](https://latex.codecogs.com/svg.image?v=\frac{1}{2}\left(v_{0}&plus;v_{1}\right))   
 ![](./images/loop_subdivision/3.png)     
 
+### 比较Loop_Subdivision结果
+<table>
+  <tr>
+    <td><img src="images/loop_subdivision/7.png" alt="Image 1" width="100%"></td>
+    <td><img src="images/loop_subdivision/6.png" alt="Image 2" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center">original</td>
+    <td align="center">result</td>
+  </tr>
+</table>
 
 
 
