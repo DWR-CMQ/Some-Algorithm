@@ -1,0 +1,38 @@
+# 论文    
+* Charles Loop: Smooth Subdivision Surfaces Based on Triangles, M.S. Mathematics thesis, University of Utah, 1987    
+下载地址:https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/thesis-10.pdf     
+
+
+根据论文规则,网格细分分为两步
+1 增加三角形数量    
+2 调整顶点位置    
+预先设置更新后的mesh的顶点,半边,面,如下图所示    
+![](./images/loop_subdivision/1.png)    
+一个三角形的顶点,半边,面的数量分别为3,6,1;在进行细分后,三者数量变为6,18,4     
+
+调整顶点数量,有四种情况
+**网格内部V-顶点位置**
+设内部顶点$v_{0}$的相邻点为$v_{1}$,$v_{2}$,...$v_{n}$,则该顶点更新后位置变为  
+https://latex.codecogs.com/svg.image?v=\left(1-n\beta\right)v_{0}&plus;\beta\sum_{i=1}^{n}v_{i}
+
+
+**网格边界V-顶点位置**
+
+
+**网格内部E-顶点位置**
+
+
+**网格边界E-顶点位置**
+
+
+
+
+
+
+
+
+
+
+
+
+
