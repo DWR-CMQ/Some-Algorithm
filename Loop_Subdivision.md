@@ -3,7 +3,7 @@
 下载地址:https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/thesis-10.pdf     
 
 
-根据论文规则,网格细分分为两步
+根据论文规则,网格细分分为两步   
 1 增加三角形数量    
 2 调整顶点位置    
 预先设置更新后的mesh的顶点,半边,面,如下图所示    
